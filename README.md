@@ -1,4 +1,4 @@
-el-chango-encuerado
+El Chango Encuerado
 ===================
 
 Tema Desnudo de Wordpress Basado en Starkers
