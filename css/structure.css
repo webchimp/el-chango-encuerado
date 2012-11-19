@@ -1,0 +1,23 @@
+/* _____ __                  __                
+  / ___// /________  _______/ /___  __________ 
+  \__ \/ __/ ___/ / / / ___/ __/ / / / ___/ _ \
+ ___/ / /_/ /  / /_/ / /__/ /_/ /_/ / /  /  __/
+/____/\__/_/   \__,_/\___/\__/\__,_/_/   \___/ 
+
+La mejor estructura no garantizará los resultados ni el rendimiento. Pero la estructura equivocada
+es una garantía de fracaso.
+																					 - Peter Drucker
+
+==================================================================================================*/
+
+body{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 12pt; }
+
+br.clear{ clear: both; display: block; height: 1px; margin: -1px 0 0 0; }
+
+header,
+footer,
+#content{
+	
+	width: 1000px;
+	margin: 0 auto;
+}

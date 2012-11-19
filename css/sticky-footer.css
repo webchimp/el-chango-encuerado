@@ -1,0 +1,24 @@
+/* _____ __  _      __            ______            __           
+  / ___// /_(_)____/ /____  __   / ____/___  ____  / /____  _____
+  \__ \/ __/ / ___/ //_/ / / /  / /_  / __ \/ __ \/ __/ _ \/ ___/
+ ___/ / /_/ / /__/ ,< / /_/ /  / __/ / /_/ / /_/ / /_/  __/ /    
+/____/\__/_/\___/_/|_|\__, /  /_/    \____/\____/\__/\___/_/     
+                     /____/                                      
+
+With just a few simple CSS classes with minimal extra HTML markup, I've fashioned a CSS Sticky 
+Footer that even beginners can get a handle on. It's been tested in IE 5 and up, Firefox, Safari 
+and Opera.
+==================================================================================================*/
+
+*{ margin: 0; }
+html, body{ height: 100%; }
+
+#wrapper{
+	
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px;
+}
+
+footer, .push{ height: 100px; clear: both; }
