@@ -8,6 +8,9 @@
 	 * @since 		El Chango Encuerado 2.0
 	 *
 	 */
+	//WP Config ------------------------------------------------------------------------------------
+	//Deshabilitamos las revisiones
+	define('WP_POST_REVISIONS', false);
 	
 	//Supports -------------------------------------------------------------------------------------
 	add_theme_support('menus');
