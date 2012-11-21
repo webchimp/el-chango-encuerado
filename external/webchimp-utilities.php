@@ -41,6 +41,9 @@
 	}
 	add_action('admin_menu', 'wc_remove_menus');
 	
+	//Ocultamos barra de administrador para usuarios no administradores ----------------------------
+	if(!current_user_can('edit_posts')) { add_filter('show_admin_bar', '__return_false'); }
+	
 	//Obtener id por slug --------------------------------------------------------------------------
 	function get_ID_by_slug($page_slug){
 		
