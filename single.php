@@ -9,16 +9,28 @@
  * @since 		Starkers 4.0
  */
 ?>
+<?php
+	//Sticky Footer
+	//get_template_parts(array('parts/shared/html-header', 'parts/stickyfooter/header', 'parts/shared/header'));
+?>
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<section>
+	<?php if(have_posts()) while(have_posts()): the_post(); ?>
+		
+		<article>
+			<h2 class="titulo"><?php the_title(); ?></h2>
+			<!--<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>-->
+			<div class="the-content">
+				<?php the_content(); ?>
+			</div>
+		</article>
+		
+	<?php endwhile; ?>
+</section>
 
-<article>
-	<h2><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>
-</article>
-
-<?php endwhile; ?>
-
+<?php
+	//Sticky Footer
+	//get_template_parts(array('parts/stickyfooter/footer', 'parts/shared/footer','parts/shared/html-footer'));
+?>
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

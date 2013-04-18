@@ -17,11 +17,46 @@ post.
 .the-content{
 	
 	font-size: 13px;
-	color: #464646;
 }
 
 .the-content p{
 	
 	line-height: 1.5;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+.the-content h1,
+.the-content h2,
+.the-content h3,
+.the-content h4,
+.the-content h5,
+.the-content h6{
+	
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.the-content h1{ font-size: 20px; }
+.the-content h2{ font-size: 18px; }
+.the-content h3{ font-size: 16px; }
+.the-content h4{ font-size: 14px; }
+.the-content h5{ font-size: 13px; }
+.the-content h6{ font-size: 13px; }
+
+.the-content ul, ol{
+	
+	margin: 10px 0px;
+	margin-left: 30px;
+}
+
+.the-content ul li{
+	
+	list-style-type: square;
+	margin-bottom: 10px;
+}
+
+.the-content ol li{
+	
+	list-style-type: decimal;
+	margin-bottom: 10px;
 }

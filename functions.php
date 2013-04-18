@@ -28,6 +28,8 @@
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	============================================================================================= */
 	
+	//require_once( 'custom-post-types/producto.php' );
+	
 	/* =============================================================================================
 	Scripts
 	============================================================================================= */
@@ -41,7 +43,19 @@
 
 	function script_enqueuer(){
 		//JS
-		wp_register_script('site', get_template_directory_uri().'/js/site.js', array('jquery'));
+		if(in_pages(array('contacto', 'contact'))):
+			
+			wp_register_script('google.maps', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false');
+			wp_enqueue_script('google.maps');
+		endif;
+		
+		wp_register_script('jquery.validator2', get_template_directory_uri().'/js/jquery.validator2.js', array('jquery'));
+		wp_enqueue_script('jquery.validator2');
+		
+		wp_register_script('jquery.cycle.all', get_template_directory_uri().'/js/jquery.cycle.all.js', array('jquery'));
+		wp_enqueue_script('jquery.cycle.all');
+		
+		wp_register_script('site', get_template_directory_uri().'/js/site.js', array('jquery', 'jquery-form', 'jquery-color'));
 		wp_enqueue_script('site');
 		
 		//CSS
@@ -65,7 +79,7 @@
 	function starkers_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment; 
 		?>
-		<?php if ( $comment->comment_approved == '1' ): ?>	
+		<?php if ( $comment->comment_approved == '1' ): ?>
 		<li>
 			<article id="comment-<?php comment_ID() ?>">
 				<?php echo get_avatar( $comment ); ?>

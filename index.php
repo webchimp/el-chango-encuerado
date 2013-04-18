@@ -13,9 +13,17 @@
  * @since 		Starkers 4.0
  */
 ?>
-<?php //Sticky Footer: get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header-stickyfooter', 'parts/shared/header', 'parts/shared/content' ) ); ?>
+
+<?php
+	//Sticky Footer
+	//get_template_parts(array('parts/shared/html-header', 'parts/stickyfooter/header', 'parts/shared/header'));
+?>
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<section>
+</section>
+
+<!--
 <?php if ( have_posts() ): ?>
 <h2>Latest Posts</h2>
 <ol>
@@ -32,5 +40,10 @@
 <?php else: ?>
 <h2>No posts to display</h2>
 <?php endif; ?>
+-->
 
-<?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php
+	//Sticky Footer
+	//get_template_parts(array('parts/stickyfooter/footer', 'parts/shared/footer','parts/shared/html-footer'));
+?>
+<?php get_template_parts(array('parts/shared/footer','parts/shared/html-footer')); ?>
