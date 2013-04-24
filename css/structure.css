@@ -1,8 +1,8 @@
-/* _____ __                  __                
-  / ___// /________  _______/ /___  __________ 
+/* _____ __                  __
+  / ___// /________  _______/ /___  __________
   \__ \/ __/ ___/ / / / ___/ __/ / / / ___/ _ \
  ___/ / /_/ /  / /_/ / /__/ /_/ /_/ / /  /  __/
-/____/\__/_/   \__,_/\___/\__/\__,_/_/   \___/ 
+/____/\__/_/   \__,_/\___/\__/\__,_/_/   \___/
 
 La mejor estructura no garantizará los resultados ni el rendimiento. Pero la estructura equivocada
 es una garantía de fracaso.
@@ -18,7 +18,30 @@ header,
 footer,
 section,
 #content{
-	
+
 	width: 1000px;
 	margin: 0 auto;
 }
+
+div 			{ position: relative; }
+
+.margins 		{ margin: 15px; }
+.margins-horz 	{ margin: 0 15px; }
+.margins-vert 	{ margin: 15px 0; }
+
+.boxfix 		{ padding: 1px; }
+.boxfix-horz 	{ padding: 0 1px; }
+.boxfix-vert 	{ padding: 1px 0; }
+
+.pull-left 		{ float: left; }
+.pull-right 	{ float: right; }
+
+.text-left 		{ text-align: left; }
+.text-right 	{ text-align: right; }
+.text-center	{ text-align: center; }
+.text-justify 	{ text-align: justify; }
+
+.column 		{ float: left; }
+.column-half	{ width: 50%; }
+.column-third	{ width: 33%; }
+.column-fourth	{ width: 25%; }
