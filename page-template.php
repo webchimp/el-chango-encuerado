@@ -7,10 +7,7 @@
  * @since 		Starkers 4.0
  */
 ?>
-<?php
-	//Sticky Footer
-	//get_template_parts(array('parts/shared/html-header', 'parts/stickyfooter/header', 'parts/shared/header'));
-?>
+
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <section>
@@ -24,8 +21,4 @@
 	
 </section>
 
-<?php
-	//Sticky Footer
-	//get_template_parts(array('parts/stickyfooter/footer', 'parts/shared/footer','parts/shared/html-footer'));
-?>
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
