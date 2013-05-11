@@ -138,12 +138,20 @@
 	}
 	
 	//Body Class Genérico --------------------------------------------------------------------------
-	function wc_body_class($slug){
+	function wc_body_class($slugs){
 		
-		global $el_slug;
-		$el_slug = $slug;
-		
-		add_filter('body_class', function($classes){ global $el_slug; $classes[] = $el_slug; return $classes; });
+		add_filter('body_class', function($classes) use ($slugs){
+			
+			if(is_array($slugs)):
+				foreach($slugs as $slug):
+					$classes[] = $slug;
+				endforeach;
+			else:
+				$classes[] = $slugs;
+			endif;
+			
+			return $classes; 
+		});
 	}
 	
 	//Image Folder Src -----------------------------------------------------------------------------
