@@ -10,14 +10,14 @@
  */
 ?>
 
-<?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
 <section>
 	<?php if(have_posts()) while(have_posts()): the_post(); ?>
 		
 		<article>
 			<h2 class="titulo"><?php the_title(); ?></h2>
-			<!--<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>-->
+			<!--<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>-->
 			<div class="the-content">
 				<?php the_content(); ?>
 			</div>
@@ -26,4 +26,4 @@
 	<?php endwhile; ?>
 </section>
 
-<?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>

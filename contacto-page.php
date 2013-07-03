@@ -8,10 +8,10 @@
  */
 ?>
 
-<?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
-<section class="page">
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<section>
+	<?php if(have_posts()) while(have_posts()): the_post(); ?>
 	<h2 class="titulo"><?php the_title(); ?></h2>
 	
 	<div id="mapa">
@@ -41,10 +41,10 @@
 	</form>
 	
 	<div class="datos">
+		<?php the_content(); ?>
 	</div>
 	
-	<?php the_content(); ?>
 	<?php endwhile; ?>
 </section>
 
-<?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>

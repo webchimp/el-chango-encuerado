@@ -14,7 +14,7 @@
  */
 ?>
 
-<?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
 <section>
 </section>
@@ -27,7 +27,7 @@
 	<li>
 		<article>
 			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+			<time datetime="<?php the_time( 'Y-m-D' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
 			<?php the_content(); ?>
 		</article>
 	</li>
@@ -38,4 +38,4 @@
 <?php endif; ?>
 -->
 
-<?php get_template_parts(array('parts/shared/footer','parts/shared/html-footer')); ?>
+<?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
