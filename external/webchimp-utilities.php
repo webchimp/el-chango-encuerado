@@ -204,6 +204,26 @@
 		return $pageURL;
 	}
 
+	//Slugify string -------------------------------------------------------------------------------
+	function wc_slugify($str, $echo = false, $replace = array(), $delimiter = '-') {
+		setlocale(LC_ALL, 'en_US.UTF8');
+		# Remove spaces
+		if( !empty($replace) ) {
+			$str = str_replace((array)$replace, ' ', $str);
+		}
+		# Remove non-ascii characters
+		$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+		# Remove non alphanumeric characters and lowercase the result
+		$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+		$clean = strtolower(trim($clean, '-'));
+		# Remove other unwanted characters
+		$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+		if ($echo) {
+			echo $clean;
+		}
+		return $clean;
+	}
+
 	//Formulario de contacto -----------------------------------------------------------------------
 	add_action('wp_ajax_formulario_contacto', 'wc_formulario_contacto');
 	add_action('wp_ajax_nopriv_formulario_contacto', 'wc_formulario_contacto');
