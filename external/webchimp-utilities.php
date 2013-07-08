@@ -138,21 +138,30 @@
 	}
 
 	//Body Class Genérico --------------------------------------------------------------------------
+	$wc_slugs = array();
+
 	function wc_body_class($slugs){
-
-		add_filter('body_class', function($classes) use ($slugs){
-
-			if(is_array($slugs)):
-				foreach($slugs as $slug):
-					$classes[] = $slug;
-				endforeach;
-			else:
-				$classes[] = $slugs;
-			endif;
-
-			return $classes;
-		});
+		global $wc_slugs;
+		if (is_array($slugs)):
+			$wc_slugs = array_merge($wc_slugs, $slugs);
+		else:
+			$wc_slugs[] = $slugs;
+		endif;
 	}
+
+	add_filter('body_class', function($classes) {
+		global $wc_slugs;
+
+		if(is_array($wc_slugs)):
+			foreach($wc_slugs as $slug):
+				$classes[] = $slug;
+			endforeach;
+		else:
+			$classes[] = $wc_slugs;
+		endif;
+
+		return $classes;
+	});
 
 	//Image Folder Src -----------------------------------------------------------------------------
 	function img($path = '', $echo = true){
