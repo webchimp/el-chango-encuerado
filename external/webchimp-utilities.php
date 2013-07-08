@@ -188,6 +188,22 @@
 		return $content;
 	}
 
+	//Get current URL ------------------------------------------------------------------------------
+	function wc_cur_page_url($echo = false) {
+		$pageURL = 'http';
+		if ($_SERVER["HTTPS"] == "on") { $pageURL .= "s"; }
+		$pageURL .= "://";
+		if ($_SERVER["SERVER_PORT"] != "80") {
+			$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+		} else {
+			$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+		}
+		if ($echo) {
+			echo $pageURL;
+		}
+		return $pageURL;
+	}
+
 	//Formulario de contacto -----------------------------------------------------------------------
 	add_action('wp_ajax_formulario_contacto', 'wc_formulario_contacto');
 	add_action('wp_ajax_nopriv_formulario_contacto', 'wc_formulario_contacto');
