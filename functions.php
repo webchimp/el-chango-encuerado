@@ -28,7 +28,7 @@
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	============================================================================================= */
 	
-	//require_once( 'custom-post-types/producto.php' );
+	//require_once('custom-post-types/nombre.php');
 	
 	/* =============================================================================================
 	Scripts
@@ -95,5 +95,5 @@
 			</article>
 		<?php endif; ?>
 		</li>
-		<?php 
+		<?php
 	}
