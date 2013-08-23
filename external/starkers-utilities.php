@@ -67,7 +67,7 @@
 	function add_slug_to_body_class( $classes ) {
 		global $post;
 	   
-		if( is_home() ) {			
+		if( is_home() ){
 			$key = array_search( 'blog', $classes );
 			if($key > -1) {
 				unset( $classes[$key] );
