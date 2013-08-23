@@ -8,110 +8,11 @@
 	 * @since 		El Chango Encuerado 2.0
 	 *
 	 */
-	//WP Config ------------------------------------------------------------------------------------
-	//Deshabilitamos las revisiones
-	//define('WP_POST_REVISIONS', false);
-
-	//Habilitamos el debug
-	//define('WP_DEBUG', true);
-
+	
 	//Supports -------------------------------------------------------------------------------------
 	add_theme_support('menus');
 	add_theme_support('post-thumbnails');
-	register_nav_menus(array('primary' => __( 'Primary Navigation', 'twentyten' )));
-
-	/*	   ______           __                  _             __  _
-		  / ____/_  _______/ /_____  ____ ___  (_)___  ____ _/ /_(_)___  ____
-		 / /   / / / / ___/ __/ __ \/ __ `__ \/ /_  / / __ `/ __/ / __ \/ __ \
-		/ /___/ /_/ (__  ) /_/ /_/ / / / / / / / / /_/ /_/ / /_/ / /_/ / / / /
-		\____/\__,_/____/\__/\____/_/ /_/ /_/_/ /___/\__,_/\__/_/\____/_/ /_/
-		                                                                      */
-
-	define('STICKY_FOOTER', true);
-
-	//Image sizes para el sitio --------------------------------------------------------------------
-	//add_image_size('nombre', x, y, true);
-
-	//Ocultamos barra de administrador para usuarios no administradores ----------------------------
-	if(!current_user_can('edit_posts')) { add_filter('show_admin_bar', '__return_false'); }
-
-	//Estilo para el login del admin ---------------------------------------------------------------
-	function wc_login_stylesheet(){ ?>
-		<link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/style-login.css'; ?>" type="text/css" media="all" />
-	<?php }
-	add_action('login_enqueue_scripts', 'wc_login_stylesheet');
-
-	//Ocultar secciones en el administrador --------------------------------------------------------
-	function wc_remove_menus(){
-		global $menu;
-
-		$restricted = array(__('Dashboard'), __('Posts'), __('Media'), __('Links'), __('Pages'), __('Appearance'), __('Tools'), __('Users'), __('Settings'), __('Comments'), __('Plugins'));
-
-		$restricted = array();
-
-		end ($menu);
-		while (prev($menu)){
-			$value = explode(' ',$menu[key($menu)][0]);
-			if(in_array($value[0] != NULL? $value[0]: "", $restricted)){ unset($menu[key($menu)]); }
-		}
-	}
-	add_action('admin_menu', 'wc_remove_menus');
-
-	//Sanitizamos subidas de archivos --------------------------------------------------------------
-	function wc_sanitize_spanish_chars ($filename){
-
-		$spanish_chars = array( '/á/', '/é/', '/í/', '/ó/', '/ú/', '/ü/', '/ñ/', '/Á/', '/É/', '/Í/', '/Ó/', '/Ú/', '/Ü/', '/Ñ/', '/º/', '/ª/' );
-		$sanitized_chars = array('a', 'e', 'i', 'o', 'u', 'u', 'n', 'A', 'E', 'I', 'O', 'U', 'U', 'N', 'o', 'a');
-		$friendly_filename = preg_replace($spanish_chars, $sanitized_chars, $filename);
-		return $friendly_filename;
-	}
-	add_filter('sanitize_file_name', 'wc_sanitize_spanish_chars', 10);
-
-	//Body class por browser -----------------------------------------------------------------------
-	function wc_browser_body_class($classes){
-
-		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
-		if( $is_lynx ) $classes[] = 'lynx';
-		elseif( $is_gecko ) $classes[] = 'gecko';
-		elseif( $is_opera ) $classes[] = 'opera';
-		elseif( $is_NS4 ) $classes[] = 'ns4';
-		elseif( $is_safari ) $classes[] = 'safari';
-		elseif( $is_chrome ) $classes[] = 'chrome';
-		elseif( $is_IE ){
-			$classes[] = 'ie';
-			if( preg_match('/MSIE ( [0-9]+)([a-zA-Z0-9.]+)/', $_SERVER['HTTP_USER_AGENT'], $browser_version ) )
-				$classes[] = 'ie' . $browser_version[1];
-		} else $classes[] = 'unknown';
-		if( $is_iphone ) $classes[] = 'iphone';
-		return $classes;
-	}
-	add_filter( 'body_class','wc_browser_body_class' );
-
-	//WP Ajax URL ----------------------------------------------------------------------------------
-	add_action('wp_head','wc_ajaxurl');
-	function wc_ajaxurl() {
-		?>
-		<script type="text/javascript">
-			var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-		</script>
-		<?php
-	}
-
-	//Ocultamos todos los widgets del dashboard de WordPress ---------------------------------------
-	function wc_remove_dashboard_widgets() {
-		global $wp_meta_boxes;
-
-		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
-		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
-		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
-		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
-		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
-		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-	}
-
-	add_action('wp_dashboard_setup', 'wc_remove_dashboard_widgets' );
+	register_nav_menus(array('primary' => __( 'Primary Navigation', 'elchango' )));
 
 	/*	    ______                 __  _
 		   / ____/_  ______  _____/ /_(_)___  ____  ___  _____
