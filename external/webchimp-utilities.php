@@ -8,7 +8,7 @@
 	 * @since 		El Chango Encuerado 2.0
 	 *
 	 */
-	
+
 	//Supports -------------------------------------------------------------------------------------
 	add_theme_support('menus');
 	add_theme_support('post-thumbnails');
@@ -48,21 +48,24 @@
 		else:
 			$wc_slugs[] = $slugs;
 		endif;
+		return $wc_slugs;
 	}
 
-	add_filter('body_class', function($classes) {
-		global $wc_slugs;
+	add_filter('body_class','wc_body_class');
 
-		if(is_array($wc_slugs)):
-			foreach($wc_slugs as $slug):
-				$classes[] = $slug;
-			endforeach;
-		else:
-			$classes[] = $wc_slugs;
-		endif;
+	// add_filter('body_class', function($classes) {
+	// 	global $wc_slugs;
 
-		return $classes;
-	});
+	// 	if(is_array($wc_slugs)):
+	// 		foreach($wc_slugs as $slug):
+	// 			$classes[] = $slug;
+	// 		endforeach;
+	// 	else:
+	// 		$classes[] = $wc_slugs;
+	// 	endif;
+
+	// 	return $classes;
+	// });
 
 	//Image Folder Src -----------------------------------------------------------------------------
 	function img($path = '', $echo = true){
