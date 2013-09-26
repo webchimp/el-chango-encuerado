@@ -64,6 +64,9 @@
 		wp_register_script('jquery.magnific-popup.min', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'));
 		wp_enqueue_script('jquery.magnific-popup.min');
 
+		wp_register_script('jquery.slimscroll.min', get_template_directory_uri() . '/js/jquery.slimscroll.min.js', array('jquery'));
+		wp_enqueue_script('jquery.slimscroll.min');
+
 		wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery', 'jquery-form', 'jquery-color'));
 		wp_enqueue_script('site');
 
