@@ -53,25 +53,4 @@
 		
 		register_post_type( 'producto', $args );
 	}
-	
-	/* =============================================================================================
-	CPT Icon
-	============================================================================================= */
-	
-	add_action('admin_head', 'cpt_producto_icon');
-	
-	/**
-	 * Adds css for custom icon in WP Admin Menu to CPT
-	 *
-	 * @return void
-	 * @author Rodrigo Tejero
-	 */
-	
-	function cpt_producto_icon(){ ?>
-		<style type="text/css" media="screen">
-			#menu-posts-producto .wp-menu-image{ background: url('<?php bloginfo('template_url') ?>/images/admin/producto.png') no-repeat 6px -17px !important; }
-			#menu-posts-producto:hover .wp-menu-image, #menu-posts-producto.wp-has-current-submenu .wp-menu-image { background-position: 6px 7px!important; }
-		</style>
-	<?php }
-	
 ?>
