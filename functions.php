@@ -15,7 +15,6 @@
 
 	require_once('external/starkers-utilities.php');
 	require_once('external/webchimp-utilities.php');
-	require_once('external/wc_utils/costumization.php');
 
 	/* =============================================================================================
 	Actions and Filters
