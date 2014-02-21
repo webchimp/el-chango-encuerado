@@ -1,9 +1,23 @@
-/*	    __            _                      
+/*	    __            _
 	   / /___  ____ _(_)___   _______________
 	  / / __ \/ __ `/ / __ \ / ___/ ___/ ___/
-	 / / /_/ / /_/ / / / / // /__(__  |__  ) 
-	/_/\____/\__, /_/_/ /_(_)___/____/____/  
-	        /____/                           
-	                                         
+	 / / /_/ / /_/ / / / / // /__(__  |__  )
+	/_/\____/\__, /_/_/ /_(_)___/____/____/
+	        /____/
+
 
 ==================================================================================================*/
+
+html, body{
+
+	background: url('images/admin/admin-background.gif') center top !important;
+}
+
+.login h1 a{
+
+	background-image: none, url("images/admin/admin-logo.png");
+	background-size: auto auto;
+	height: 73px;
+	width: 238px;
+	margin-bottom: 10px;
+}
