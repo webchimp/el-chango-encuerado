@@ -91,6 +91,7 @@
 	 * @return void
 	 * @author Keir Whitaker
 	 */
+
 	function starkers_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		?>

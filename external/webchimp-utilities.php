@@ -9,8 +9,8 @@
 	 *
 	 */
 	
-	require_once('wc_utils/costumization.php');
-	require_once('wc_utils/ajax.php');
+	require_once('wc-utils/costumization.php');
+	require_once('wc-utils/ajax.php');
 	
 	//Supports -------------------------------------------------------------------------------------
 	add_theme_support('menus');
@@ -106,6 +106,7 @@
 
 	//Get current URL ------------------------------------------------------------------------------
 	function wc_cur_page_url($echo = false) {
+		
 		$pageURL = 'http';
 		if ($_SERVER["HTTPS"] == "on") { $pageURL .= "s"; }
 		$pageURL .= "://";
@@ -122,6 +123,7 @@
 
 	//Slugify string -------------------------------------------------------------------------------
 	function wc_slugify($str, $echo = false, $replace = array(), $delimiter = '-') {
+		
 		setlocale(LC_ALL, 'en_US.UTF8');
 		# Remove spaces
 		if( !empty($replace) ) {

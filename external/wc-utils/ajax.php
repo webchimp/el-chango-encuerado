@@ -1,5 +1,5 @@
 <?php
-	
+
 	//Formulario de contacto -----------------------------------------------------------------------
 	add_action('wp_ajax_formulario_contacto', 'wc_formulario_contacto');
 	add_action('wp_ajax_nopriv_formulario_contacto', 'wc_formulario_contacto');
@@ -41,5 +41,5 @@
 
 		die();
 	}
-	
+
 ?>

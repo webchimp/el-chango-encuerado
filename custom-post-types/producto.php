@@ -1,21 +1,21 @@
 <?php
-	
+
 	/* =============================================================================================
 	Add Custom Post Type
 	============================================================================================= */
-	
+
 	/**
 	 * Registers the custom post type to Wordpress
 	 *
 	 * @return void
 	 * @author Rodrigo Tejero
 	 */
-	
+
 	add_action( 'init', 'register_cpt_producto' );
-	
+
 	function register_cpt_producto() {
-		
-		$labels = array( 
+
+		$labels = array(
 			'name' => _x( 'Productos', 'producto' ),
 			'singular_name' => _x( 'Producto', 'producto' ),
 			'add_new' => _x( 'Agregar nuevo', 'producto' ),
@@ -29,8 +29,8 @@
 			'parent_item_colon' => _x( 'Producto Padre:', 'producto' ),
 			'menu_name' => _x( 'Productos', 'producto' ),
 		);
-		
-		$args = array( 
+
+		$args = array(
 			'labels' => $labels,
 			'hierarchical' => false,
 			'description' => 'Productos de la tienda',
@@ -40,7 +40,8 @@
 			'show_ui' => true,
 			'show_in_menu' => true,
 			'menu_position' => 5,
-			
+			'menu_icon'=> 'dashicons-portfolio',
+
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -50,7 +51,7 @@
 			'rewrite' => true,
 			'capability_type' => 'post'
 		);
-		
+
 		register_post_type( 'producto', $args );
 	}
 ?>
