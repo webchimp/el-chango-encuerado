@@ -1,8 +1,8 @@
-/* __  __                                __             __ 
+/* __  __                                __             __
   / /_/ /_  ___        _________  ____  / /____  ____  / /_
  / __/ __ \/ _ \______/ ___/ __ \/ __ \/ __/ _ \/ __ \/ __/
-/ /_/ / / /  __/_____/ /__/ /_/ / / / / /_/  __/ / / / /_  
-\__/_/ /_/\___/      \___/\____/_/ /_/\__/\___/_/ /_/\__/  
+/ /_/ / / /  __/_____/ /__/ /_/ / / / / /_/  __/ / / / /_
+\__/_/ /_/\___/      \___/\____/_/ /_/\__/\___/_/ /_/\__/
 
 Displays the contents of the current post. This tag must be within The_Loop.
 
@@ -10,17 +10,17 @@ If the quicktag <!--more--> is used in a post to designate the "cut-off" point f
 excerpted, the_content() tag will only show the excerpt up to the <!--more--> quicktag point on
 non-single/non-permalink post pages. By design, the_content() tag includes a parameter for
 formatting the <!--more--> content and look, which creates a link to "continue reading" the full
-post. 
+post.
 
 ==================================================================================================*/
 
 .the-content{
-	
+
 	font-size: 13px;
 }
 
 .the-content p{
-	
+
 	line-height: 1.5;
 	margin-bottom: 10px;
 }
@@ -31,7 +31,7 @@ post.
 .the-content h4,
 .the-content h5,
 .the-content h6{
-	
+
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
@@ -44,19 +44,44 @@ post.
 .the-content h6{ font-size: 13px; }
 
 .the-content ul, ol{
-	
+
 	margin: 10px 0px;
 	margin-left: 30px;
 }
 
 .the-content ul li{
-	
+
 	list-style-type: square;
 	margin-bottom: 10px;
 }
 
 .the-content ol li{
-	
+
 	list-style-type: decimal;
 	margin-bottom: 10px;
+}
+
+.the-content .alignleft{
+
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.the-content .alignright{
+
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.the-content .aligncenter{
+
+	display: block;
+	margin: 10px auto;
+}
+
+.the-content .alignnone{
+
+	float: none;
 }
