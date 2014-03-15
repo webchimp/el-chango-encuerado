@@ -12,7 +12,6 @@
 <?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
 <section>
-
 	<?php if(have_posts()): the_post(); ?>
 
 		<h2>Author Archives: <?php echo get_the_author() ; ?></h2>
@@ -34,7 +33,6 @@
 	<?php else: ?>
 		<h2>No posts to display for <?php echo get_the_author(); ?></h2>
 	<?php endif; ?>
-
 </section>
 
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>

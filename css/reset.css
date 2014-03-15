@@ -1,9 +1,9 @@
-/*	                        __                 
+/*	                        __
 	   ________  ________  / /_ _______________
 	  / ___/ _ \/ ___/ _ \/ __// ___/ ___/ ___/
-	 / /  /  __(__  )  __/ /__/ /__(__  |__  ) 
-	/_/   \___/____/\___/\__(_)___/____/____/  
-	                                           
+	 / /  /  __(__  )  __/ /__/ /__(__  |__  )
+	/_/   \___/____/\___/\__(_)___/____/____/
+
 
 Adapted from:
  * Normalize.css by Nicolas Gallagher and Jonathan Neal: https://github.com/necolas/normalize.css/
@@ -14,89 +14,89 @@ Adapted from:
 
 ==================================================================================================*/
 
-html, 
-body, 
-div, 
-span, 
-object, 
-iframe, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-p, 
-blockquote, 
-pre, 
-abbr, 
-address, 
-cite, 
-code, 
-del, 
-dfn, 
-em, 
-img, 
-ins, 
-kbd, 
-q, 
-samp, 
-small, 
-strong, 
-sub, 
-sup, 
-var, 
-b, 
-i, 
-dl, 
-dt, 
-dd, 
-ol, 
-ul, 
-li, 
-fieldset, 
-form, 
-label, 
-legend, 
-table, 
-caption, 
-tbody, 
-tfoot, 
-thead, 
-tr, 
-th, 
-td, 
-article, 
-aside, 
-canvas, 
-details, 
-figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
-menu, 
-nav, 
-section, 
-summary, 
-time, 
-mark, 
-audio, 
-video 													{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }        
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video 													{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
 
-article, 
-aside, 
-details, 
-figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
-nav, 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
 section 												{ display: block; }
 
-audio, 
-canvas, 
+audio,
+canvas,
 video 													{ display: inline-block; *display: inline; *zoom: 1; }
 
 audio:not([controls]) 									{ display: none; }
@@ -107,7 +107,7 @@ html 													{ font-size: 100%; overflow-y: scroll; -webkit-text-size-adjus
 
 body 													{ margin: 0; }
 
-h1, h2, h3, h4, h5, h6 { font-weight:normal; }          
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }
 
 a		 												{ color:blue; }
 
@@ -117,7 +117,7 @@ li														{ list-style:none; }
 
 abbr[title]  											{ border-bottom:none; }
 
-b, 
+b,
 strong  												{ font-weight: 700; }
 
 i,
@@ -130,21 +130,21 @@ ins  													{ background: #ff9; color: #000; text-decoration: none; }
 
 mark 	 												{ background: #ff0; color: #000; font-style: italic; font-weight: bold; }
 
-pre, 
-code, 
-kbd, 
+pre,
+code,
+kbd,
 samp  													{ font-family: monospace, monospace; _font-family: 'courier new', monospace; }
 
 pre  													{ white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 q  														{ quotes: none; }
 
-q:before, 
+q:before,
 q:after  												{ content: ""; content: none; }
 
 small 													{ font-size: 85%; }
 
-sub, 
+sub,
 sup  													{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
 sup  													{ top: -0.5em; }
@@ -155,25 +155,25 @@ img  													{ border: 0; -ms-interpolation-mode: bicubic; vertical-align: 
 
 label  													{ cursor: pointer; }
 
-input, 
-select, 
+input,
+select,
 textarea  												{ font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 
-button, 
+button,
 input  													{ line-height: normal; *overflow: visible; }
 
-button, 
-input[type="button"], 
-input[type="reset"], 
+button,
+input[type="button"],
+input[type="reset"],
 input[type="submit"] 									{ cursor: pointer; -webkit-appearance: button; }
 
-input[type="checkbox"], 
+input[type="checkbox"],
 input[type="radio"] 									{ box-sizing: border-box; }
 
 input[type="search"] 									{ -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 input[type="search"]::-webkit-search-decoration			{ -webkit-appearance: none; }
 
-button::-moz-focus-inner, 
+button::-moz-focus-inner,
 input::-moz-focus-inner 								{ border: 0; padding: 0; }
 
 textarea  												{ overflow: auto; vertical-align: top; resize: vertical; }
