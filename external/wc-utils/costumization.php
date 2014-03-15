@@ -133,7 +133,6 @@
 		<script type="text/javascript">
 			var ajaxurl =	"<?php echo admin_url('admin-ajax.php'); ?>";
 			var wpurl =		"<?php bloginfo('template_directory'); ?>";
-			var cssurl =	"<?php bloginfo('stylesheet_url'); ?>";
 		</script>
 		<?php
 	}
