@@ -2,8 +2,6 @@
 /**
  * Search results page
  *
- * Please see /external/starkers-utilities.php for info on get_template_parts()
- *
  * @package 	WordPress
  * @subpackage 	Starkers
  * @since 		Starkers 4.0

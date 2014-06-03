@@ -7,8 +7,6 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * Please see /external/starkers-utilities.php for info on get_template_parts()
- *
  * @package 	WordPress
  * @subpackage 	Starkers
  * @since 		Starkers 4.0
