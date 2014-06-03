@@ -13,7 +13,7 @@
 <?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
 <section>
-	<h2 class="titulo">Error 404</h2>
+	<h2>Error 404</h2>
 </section>
 
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>

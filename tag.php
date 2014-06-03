@@ -12,7 +12,7 @@
 <?php get_template_parts(array('parts/shared/html-header', 'parts/shared/header')); ?>
 
 <section>
-	
+
 	<?php if(have_posts()): ?>
 		<h2>Tag Archive: <?php echo single_tag_title( '', false ); ?></h2>
 		<?php while(have_posts()): the_post(); ?>
@@ -22,11 +22,11 @@
 				<?php the_content(); ?>
 			</article>
 		<?php endwhile; ?>
-		
+
 	<?php else: ?>
 		<h2>No posts to display in <?php echo single_tag_title('', false); ?></h2>
 	<?php endif; ?>
-	
+
 </section>
 
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
