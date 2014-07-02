@@ -23,6 +23,20 @@
 	register_nav_menus(array('primary' => __( 'Primary Navigation', 'elchango' )));
 
 	/* =============================================================================================
+	Avoid suscribers to enter to WP Backend
+	============================================================================================= */
+
+	function blockusers_init() {
+		if ( is_admin() && ! current_user_can( 'administrator' ) &&
+		! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+			wp_redirect( home_url() );
+			exit;
+		}
+	}
+
+	add_action( 'init', 'blockusers_init' );
+
+	/* =============================================================================================
 	Sticky Footer
 	============================================================================================= */
 
@@ -57,8 +71,19 @@
 	add_action('login_enqueue_scripts', 'wc_login_stylesheet');
 
 	/* =============================================================================================
+	Set the permalink structure
+	============================================================================================= */
+
+	add_action('init', function(){
+
+		global $wp_rewrite;
+		$wp_rewrite->set_permalink_structure('/%postname%/');
+	});
+
+	/* =============================================================================================
 	Hiding super admin (ID 1) user
 	============================================================================================= */
+
 	function wc_pre_user_query($user_search) {
 
 		$user = wp_get_current_user();
