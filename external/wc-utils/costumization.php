@@ -23,20 +23,6 @@
 	register_nav_menus(array('primary' => __( 'Primary Navigation', 'elchango' )));
 
 	/* =============================================================================================
-	Avoid suscribers to enter to WP Backend
-	============================================================================================= */
-
-	function blockusers_init() {
-		if ( is_admin() && ! current_user_can( 'administrator' ) &&
-		! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-			wp_redirect( home_url() );
-			exit;
-		}
-	}
-
-	add_action( 'init', 'blockusers_init' );
-
-	/* =============================================================================================
 	Sticky Footer
 	============================================================================================= */
 
