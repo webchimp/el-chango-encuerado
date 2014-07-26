@@ -7,7 +7,7 @@
  * @since 		Starkers 4.0
  */
 
-	$registro = new ChimpRegistry();
+	/*$registro = new ChimpRegistry();
 
 	//Definimos los datos basicos del registro
 	$registro->registry_form = 'forma-prueba'; //La forma en la que se va a insertar
@@ -20,5 +20,9 @@
 
 	print_a($registro);
 
-	$registro->insert();
+	$registro->insert();*/
+
+	the_field('link');
+	$link = get_field('link');
+	print_r($link);
 ?>
